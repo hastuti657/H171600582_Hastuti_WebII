@@ -24,6 +24,7 @@ class LoginController extends Controller
     {
         $request->validate([
             $this->username() => 'required|string',
+            'phone' => 'phone',
             'password' => 'required|string',
             'captcha' => 'required|captcha',    
         ]);
